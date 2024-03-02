@@ -1,0 +1,8 @@
+spring:  
+  jpa:  
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:  
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${secrets.DB_HOST}:${secrets.DB_PORT}/${secrets.DB_NAME}
+    username: ${secrets.PGUSER}
+    password: ${secrets.PGPASSWORD}
