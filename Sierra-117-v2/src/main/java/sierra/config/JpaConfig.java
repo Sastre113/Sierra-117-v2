@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -31,10 +30,8 @@ public class JpaConfig {
 	private String dbPort;
 	@Value("${DB_NAME}")
 	private String dbName;
-
 	@Value("${DB_USER}")
 	private String dbUser;
-
 	@Value("${DB_PASSWORD}")
 	private String dbPassword;
 
