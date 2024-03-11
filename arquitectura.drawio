@@ -1,0 +1,22 @@
+<mxfile host="Electron" modified="2024-03-11T00:00:29.847Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="qQENiUSzahWCSKGPlnlP" version="23.1.5" type="device">
+  <diagram name="Página-1" id="7SKn9UWKxebf04naBlDX">
+    <mxGraphModel dx="1495" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zt7zTX6S3p2QTyfWicVa-5" value="" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=120;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="520" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="zt7zTX6S3p2QTyfWicVa-8" value="DOMAIN" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;labelBackgroundColor=none;labelBorderColor=none;glass=0;shadow=1;dashed=1;sketch=1;curveFitting=1;jiggle=2;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="480" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zt7zTX6S3p2QTyfWicVa-10" value="INTERFACE USE CASES" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zt7zTX6S3p2QTyfWicVa-11" value="MODEL" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="210" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
