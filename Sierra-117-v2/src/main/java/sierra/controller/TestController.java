@@ -3,18 +3,16 @@
  */
 package sierra.controller;
 
-import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import sierra.dao.GenericDao;
+import sierra.dao.IGenericDAO;
 import sierra.model.entity.User;
 
 /**
@@ -22,19 +20,20 @@ import sierra.model.entity.User;
  */
 @RestController
 public class TestController {
-	
+	/*
 	@PersistenceContext
 	private EntityManager entityManager;
-	
-	@Autowired
-	private GenericDao<Serializable> genericDao;
+	*/
 
-	public TestController(EntityManager entityManager) {
+	private IGenericDAO genericDao;
+
+	public TestController(IGenericDAO genericDao) {
 		super();
-		this.entityManager = entityManager;
+		this.genericDao = genericDao;
 	}
 	
 	@GetMapping(path = "/test")
+	@Transactional
 	public ResponseEntity<Void> testMethod(){
 		User user = new User();
 		user.setIdUser(UUID.randomUUID().toString());
@@ -44,8 +43,8 @@ public class TestController {
 		user.setEmail("fake");
 		
 		this.genericDao.create(user);
-		
-		//this.genericDao.findById(User.class, user.getIdUser());
+		User res2 = this.genericDao.findById(User.class, user.getIdUser());
+		List<User> res1 = this.genericDao.findAll(User.class);
 		
 		
 		return ResponseEntity.status(HttpStatus.OK).build();
