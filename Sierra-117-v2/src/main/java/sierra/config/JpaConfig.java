@@ -34,7 +34,22 @@ public class JpaConfig {
 	private String dbUser;
 	@Value("${DB_PASSWORD}")
 	private String dbPassword;
+	
+	@Bean
+	@Primary
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
+		LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+		entityManagerFactory.setPersistenceUnitName("sierra117EntityManagerFactory");
+		entityManagerFactory.setDataSource(dataSource);
+		entityManagerFactory.setPackagesToScan("sierra.model.entity");
 
+		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+		entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
+		entityManagerFactory.setJpaProperties(this.getProperties());
+
+		return entityManagerFactory;
+	}
+	
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -44,20 +59,6 @@ public class JpaConfig {
 		dataSource.setPassword(dbPassword);
 
 		return dataSource;
-	}
-
-	@Bean
-	@Primary
-	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
-		LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
-		entityManagerFactory.setDataSource(dataSource);
-		entityManagerFactory.setPackagesToScan("sierra.model.entity");
-
-		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-		entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
-		entityManagerFactory.setJpaProperties(this.getProperties());
-
-		return entityManagerFactory;
 	}
 
 	private Properties getProperties() {
