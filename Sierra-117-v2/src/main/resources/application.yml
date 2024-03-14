@@ -6,3 +6,8 @@ spring:
     url: jdbc:postgresql://${secrets.DB_HOST}:${secrets.DB_PORT}/${secrets.DB_NAME}
     username: ${secrets.PGUSER}
     password: ${secrets.PGPASSWORD}
+    
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    hibernate.descriptor.sql.BasicBinder: TRACE

@@ -65,6 +65,8 @@ public class JpaConfig {
 		Properties properties = new Properties();
 		properties.setProperty("spring.jpa.properties.hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 		properties.setProperty("spring.jpa.properties.hibernate.jdbc.time_zone", "UTC");
+		properties.setProperty("spring.jpa.show-sql", "true");
+		properties.setProperty("hibernate.default_schema", "sierra_schema");
 
 		return properties;
 	}

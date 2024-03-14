@@ -3,6 +3,8 @@
  */
 package sierra.controller;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -41,6 +43,7 @@ public class TestController {
 		user.setFirstName("firstName");
 		user.setActive(Boolean.FALSE);
 		user.setEmail("fake");
+		user.setCreationDate(new Timestamp(new Date().getTime()));
 		
 		this.genericDao.create(user);
 		User res2 = this.genericDao.findById(User.class, user.getIdUser());

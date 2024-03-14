@@ -22,8 +22,6 @@ public class GenericDao implements IGenericDAO {
 	@Override
 	@SuppressWarnings("unchecked")
 	public <T extends Serializable> List<T> findAll(final Class<T> clazz) {
-		List<?> te = this.entityManager.createQuery("from User").getResultList();
-		
 		return this.entityManager.createQuery("from " + clazz.getName()).getResultList();
 	}
 
