@@ -22,10 +22,6 @@ import sierra.model.entity.User;
  */
 @RestController
 public class TestController {
-	/*
-	@PersistenceContext
-	private EntityManager entityManager;
-	*/
 
 	private IGenericDAO genericDao;
 
