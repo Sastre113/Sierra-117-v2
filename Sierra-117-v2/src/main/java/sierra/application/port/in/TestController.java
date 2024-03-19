@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sierra.controller;
+package sierra.application.port.in;
 
 import java.sql.Timestamp;
 import java.util.Date;
@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import sierra.dao.IGenericDAO;
-import sierra.model.entity.User;
+import sierra.infrastructure.dao.IGenericDAO;
+import sierra.infrastructure.model.entity.User;
 
 /**
  * 
