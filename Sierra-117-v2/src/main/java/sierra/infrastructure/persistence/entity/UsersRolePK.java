@@ -1,4 +1,4 @@
-package sierra.infrastructure.model.entity;
+package sierra.infrastructure.persistence.entity;
 
 import java.io.Serializable;
 

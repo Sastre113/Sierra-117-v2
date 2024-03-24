@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import sierra.infrastructure.dao.IGenericDAO;
-import sierra.infrastructure.model.entity.User;
+import sierra.infrastructure.persistence.dao.IGenericDAO;
+import sierra.infrastructure.persistence.entity.User;
 
 /**
  * 

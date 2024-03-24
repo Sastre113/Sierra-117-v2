@@ -1,4 +1,4 @@
-package sierra.infrastructure.dao;
+package sierra.infrastructure.persistence.dao;
 
 import java.io.Serializable;
 import java.util.List;

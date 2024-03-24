@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sierra.infrastructure.config;
+package sierra.infrastructure.persistence.config;
 
 import java.util.Properties;
 
@@ -41,7 +41,7 @@ public class JpaConfig {
 		LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactory.setPersistenceUnitName("sierra117EntityManagerFactory");
 		entityManagerFactory.setDataSource(dataSource);
-		entityManagerFactory.setPackagesToScan("sierra.infrastructure.model.entity");
+		entityManagerFactory.setPackagesToScan("sierra.infrastructure.persistance.entity");
 
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
