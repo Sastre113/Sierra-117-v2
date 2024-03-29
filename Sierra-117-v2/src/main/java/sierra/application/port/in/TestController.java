@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package sierra.application.port.in;
 
 import java.sql.Timestamp;
@@ -17,9 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import sierra.infrastructure.persistence.dao.IGenericDAO;
 import sierra.infrastructure.persistence.entity.User;
 
-/**
- * 
- */
+
 @RestController
 public class TestController {
 

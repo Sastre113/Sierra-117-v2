@@ -6,6 +6,6 @@ package sierra.domain.repository;
 /**
  * 
  */
-public class UserRepository {
+public interface UserRepository {
 
 }
