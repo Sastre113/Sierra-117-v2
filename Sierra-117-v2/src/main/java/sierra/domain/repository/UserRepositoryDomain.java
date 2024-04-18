@@ -15,7 +15,7 @@ public interface UserRepositoryDomain {
 	
 	UserED save(UserED user);
 
-	Optional<UserED> findById(Long id);
+	Optional<UserED> findById(String id);
 
 	void delete(UserED user);
 

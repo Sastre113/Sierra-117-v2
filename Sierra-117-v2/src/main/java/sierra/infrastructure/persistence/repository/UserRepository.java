@@ -5,6 +5,8 @@
  */
 package sierra.infrastructure.persistence.repository;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,21 +30,24 @@ public class UserRepository implements UserRepositoryDomain {
 
 	@Override
 	public UserED save(UserED user) {
-		// TODO Auto-generated method stub
-		
 		User userEntity = new User();
-		userEntity.setIdUser(null);
+		userEntity.setIdUser(user.getIdUser());
+		userEntity.setActive(user.getActive());
+		userEntity.setCreationDate(Timestamp.from(Instant.now()));
+		userEntity.setEmail(user.getEmail());
+		userEntity.setFirstName(user.getFirstName());
+		userEntity.setLastName(user.getLastName());
+		userEntity.setUserName(user.getUserName());
 		
-		
-		
-		this.userRepositoryJPA.save(userEntity);
-		
+		this.userRepositoryJPA.save(userEntity);	
 		return user;
 	}
 
 	@Override
-	public Optional<UserED> findById(Long id) {
+	public Optional<UserED> findById(String id) {
 		// TODO Auto-generated method stub
+		this.userRepositoryJPA.findById(id).ifPresent(null);;
+		
 		return Optional.empty();
 	}
 
